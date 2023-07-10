@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{user.username}}'s TODOs</title>
+</head>
+<body>
+    <h1>Your TODOs:</h1>
+    {% for todo in todos %}
+        <h2>{{todo.task_name}}</h2>
+         <ul>
+            <li>{{todo.time}}</li>
+            <li>Status: {{todo.status}}</li>
+         </ul>
+         <a href = "/delete/{{user.id}}/{{todo.id}}">
+            delete
+         </a>
+         <a href = "/done/{{user.id}}/{{todo.id}}">
+            done
+         </a>
+
+    {% endfor %}
+</body>
+</html>

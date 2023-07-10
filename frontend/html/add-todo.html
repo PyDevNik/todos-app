@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add ToDo</title>
+</head>
+<body>
+    <form action="{{action}}" method="post" name="add-todo">
+        {{form.hidden_tag()}}
+        <p>
+            Task Name: 
+            <br>
+            {{form.task_name(size=20)}}
+            <br><br>
+            Datetime:
+            <br>
+            {{form.task_time()}}
+        </p>
+        {{form.submit()}}
+    </form>
+</body>
+</html>
